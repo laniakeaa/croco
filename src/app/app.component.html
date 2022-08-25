@@ -1,0 +1,54 @@
+<div class="contenter">
+  <header class="main-head" [ngClass]="true ? 'main-head dark' : 'main-head light'">
+    <div class="foot" style="flex-direction:column;">
+      <div>
+        <img class="icon" [src]="IMAGES+'image.png'" alt="">
+      </div>
+      <!-- <span title="რამდენჯერ ნახეს საიტი"></span> -->
+    </div>
+    <nav class="head-nav">
+      <ul class="menu">
+        <!-- <li *ngFor="let item of operationsList">
+                  <a [routerLink]="item.path">
+                      <img class="pic" [src]="!darkMode ? ICONS + item.imageDark : ICONS + item.image">
+                      <span>{{item.name}}</span></a>
+              </li> -->
+      </ul>
+    </nav>
+  </header> <!-- //main-head -->
+
+  <div class="wrap-all-the-things">
+    <!-- <router-outlet></router-outlet> -->
+    <div style="display: flex;flex-direction: column">
+      <div style="padding: 10px">
+        <img style="width: 100%;" [src]="IMAGES+'image 1.png'" alt="">
+      </div>
+      <nav class="navd">
+        <div class="menu" style="margin: 0px 0px 15px 0px;">
+          <div [ngClass]="c.name == selectedProvider.name ? 'butt slct' : 'butt'" *ngFor="let c of categories"
+            (click)="iGetCategories(c.name)">
+            {{c.name | uppercase}}
+            <div [ngClass]="c.name == selectedProvider.name ? 'abs slct' : 'abs'">
+              {{c.totalGames}}
+            </div>
+          </div>
+        </div>
+        <div class="menu" style="margin: 15px 0px 0px 0px;">
+          <div [ngClass]="n.name == selectedProvider.name ? 'butt slct' : 'butt'" *ngFor="let n of providers" (click)="iGetProviders('/'+n.provider)">
+            {{n.name | uppercase}}
+          </div>
+        </div>
+      </nav>
+      <div class="grid-container">
+        <div [ngClass]="i == 0 ? 'item item1' : 'item'" *ngFor="let g of selectedProvider.games;let i = index">
+          <div style="width: 100%;">
+            <img style="object-fit: cover;width: 100%;" [src]="g.image" alt="">
+          </div>
+          <div class="bot">
+            {{g.name}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

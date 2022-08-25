@@ -1,0 +1,168 @@
+/* You can add global styles to this file, and also import other style files */
+// @font-face {
+//     font-family: "Dejavu Sans" !important;
+//     src: url("./assets/fonts/bpg_dejavu_sans.otf") format("truetype");
+//   }
+  
+//   * {
+//     font-family: "Dejavu Sans" !important;
+//   }
+  
+  html,
+  body {
+    height: auto;
+    animation: breath 200s linear infinite;
+    background-color: #1A1E23;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Dejavu Sans";
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  
+  @keyframes breath {
+    0% {
+      background-size: 100% 120vh;
+    }
+  
+    50% {
+      background-size: 140% 140vh;
+    }
+  
+    100% {
+      background-size: 100% 120vh;
+    }
+  }
+  
+  //@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #58a5f0;
+    border: 2px solid #58a5f0;
+  }
+  
+  .inp {
+    color: #333;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    padding: 5px 0px 0px 5px;
+    border-radius: 0.2rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 100%;
+    display: block;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s;
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+  }
+  
+  .inp:hover {
+    background-color: rgb(213, 213, 213);
+  }
+  
+  .but {
+    color: #333;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 0.2rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 100%;
+    display: block;
+    transition: all 0.3s;
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+    cursor: pointer;
+  }
+  
+  .but:hover {
+    background-color: rgb(213, 213, 213);
+  }
+  
+  // dark mode
+  .dark {
+    color: white !important;
+    background: #2A3139 !important;
+  
+    mat-table {
+      background: transparent;
+    }
+  
+    mat-cell {
+      color: white;
+    }
+  
+    .mat-header-cell {
+      color: white;
+    }
+  
+    .mat-tab-label {
+      color: white;
+    }
+  
+    .mat-accent .mat-slider-track-fill {
+      background-color: white !important;
+    }
+  
+    .mat-slider-thumb-label {
+      background-color: white !important;
+  
+    }
+  
+    .mat-slider-thumb {
+      background-color: white !important;
+    }
+  
+    .mat-slider-horizontal .mat-slider-wrapper {
+      background-color: white !important;
+    }
+  }
+  
+  // light mode
+  .light {
+    color: black !important;
+    background: rgba(255, 255, 255, 0.8) !important;
+  
+    a {
+      color: rgb(2, 50, 53) !important;
+    }
+  }
+  
+  // year input
+  .inpt {
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    width: auto;
+    max-width: 50px;
+    margin: 0px 0px 0px 7px;
+  
+    &.nowidth {
+      max-width: none !important;
+    }
+  
+    &.w100 {
+      max-width: 100% !important;
+    }
+  }
+  
+  h1 {
+    margin: 0px 0px 10px 0px;
+  
+    &.darkh1 {
+      color: white !important;
+      text-shadow: 2px 2px 4px rgb(0 0 0 / 50%);
+      ;
+    }
+  
+    &.lighth1 {
+      color: black !important;
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 50%);
+    }
+  }
